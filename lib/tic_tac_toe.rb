@@ -51,6 +51,8 @@ class TICTACTOE
     end
   end
   
-  
+  def turn_count
+    @board.count "X" || @board.count "O"
+  end
   
 end
