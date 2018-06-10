@@ -52,7 +52,7 @@ class TICTACTOE
   end
   
   def turn_count
-    @board.count "X" || @board.count "O"
+    @board.count{|value| value == "X" || value == "O"}
   end
   
   def current_player
