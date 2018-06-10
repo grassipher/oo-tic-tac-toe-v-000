@@ -80,4 +80,12 @@ class TICTACTOE
     return false
   end
   
+  def full?
+    @board.none? do |value|
+      value == " "
+    end
+  end
+  
+  
+  
 end
