@@ -86,25 +86,25 @@ class TICTACTOE
     end
   end
   
-  def draw?(board)
-    if won?(board) || !full?(board)
+  def draw?
+    if won? || !full?
       return false
     else
       return true
     end
   end
   
-  def over?(board)
-    if won?(board) || full?(board) || draw?(board)
+  def over?
+    if won? || full? || draw?
       return true
     else
       return false
     end
   end
   
-  def winner(board)
-    if won?(board)
-      return board[won?(board)[0]]
+  def winner
+    if won?
+      return @board[won?[0]]
     else
       return nil
     end
