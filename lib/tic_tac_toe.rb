@@ -59,4 +59,25 @@ class TICTACTOE
     if turn_count % 2 == 0 ? "X" : "O"
   end
   
+  def won?
+    WIN_COMBINATIONS.each do |win_combinations|
+      index1 = win_combinations[0]
+      index2 = win_combinations[1]
+      index3 = win_combinations[2]
+      
+      board_spot1 = @board[index1]
+      board_spot2 = @board[index2]
+      board_spot3 = @board[index3]
+      
+      if board_spot1 == "X" && board_spot2 == "X" && board_spot3 == "X"
+        return win_combinations
+      elsif board_spot1 == "O" && board_spot2 == "O" && board_spot3 == "O"
+        return win_combinations
+      else
+        false
+      end
+    end
+    return false
+  end
+  
 end
